@@ -17,7 +17,10 @@ app = FastAPI()
 # Configurar CORS para permitir solicitudes desde el frontend (localhost:4200)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["tps://teatro-byc4p4w3t-valentinas-projects-c81f50c4.vercel.app"],  # URL de Vercel
+        allow_origins=[
+        "https://teatro-982iwkd19-valentinas-projects-c81f50c4.vercel.app",  # URL del frontend en Vercel
+        "https://mivmtest.zapto.org"  # Tu dominio No-IP
+    ],
     allow_credentials=True,
     allow_methods=["*"],  # Permitir todos los métodos HTTP (GET, POST, PUT, DELETE, etc.)
     allow_headers=["*"],  # Permitir todas las cabeceras
